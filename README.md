@@ -63,8 +63,8 @@
         <li><a href="#instalare">Instalare</a></li>
       </ul>
     </li>
-    <li><a href="#aplicatia">Aplicatia</a></li>
-    <li><a href="#contributii">Contributii</a></li>
+    <li><a href="#aplicația">Aplicația</a></li>
+    <li><a href="#contribuții">Contribuții</a></li>
     <li><a href="#concluzii-și-direcții-viitoare">Concluzii și direcții viitoare</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -121,7 +121,7 @@ Apoi am creat un request de POST pentru a adăuga un logo.
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/postEmpty.png?raw=true)
 
 <!-- CONTRIBUTING -->
-## Constributii
+## Constribuții
 
 Orice fel de contribuții sunt bine primite. Pentru a contribui la proiect faceți fork.
 
@@ -131,7 +131,7 @@ Orice fel de contribuții sunt bine primite. Pentru a contribui la proiect face�
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Conclusions and future work
+## Concluzii și direcții viitoare
 
 Pe viitor dorim să implementăm operații complexe.
 
