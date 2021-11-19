@@ -133,22 +133,22 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Conclusions and future work
 
-On the future I'm planning to be able to rent equipment based on a specific date.
-
-I'm also thinking into implementing give away gift cards for some customers.
+Pe viitor dorim să implementăm operații complexe.
 
 Possibly implement percentage usage of equipment.
 
 <!-- CONTACT -->
 ## Contact
 
+Ilie Emanuela-Maria - [emanuela.ilie99@e-uvt.ro](emanuela.ilie99@e-uvt.ro)
+
 Ricean Ioan-Vlad - [ioan.ricean95@e-uvt.ro](ioan.ricean95@e-uvt.ro)
 
-Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/RiceanVlad/SkiRental)
+Project Link: [https://github.com/vladricean/RESTApi](https://github.com/vladricean/RESTApi)
 
-School subject: Programming for Mobile Devices
+Materia: Tehnologii Web
 
-Date of dispatch: 13.05.2021
+Data lansării: 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
