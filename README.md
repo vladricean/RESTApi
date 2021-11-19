@@ -120,6 +120,12 @@ Apoi am creat un request de POST pentru a adăuga un logo.
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/postEmpty.png?raw=true)
 
+Pe viitor desigur că dorim să implementăm operații complexe, cât și un administrator care are access la anumite comenzi.
+Vom ilustra mai jos câteva exemple:
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/futureRequests.png?raw=true)
+
+
 <!-- CONTRIBUTING -->
 ## Constribuții
 
