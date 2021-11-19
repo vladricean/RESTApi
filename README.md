@@ -51,21 +51,21 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Despre proiect</a>
+      <a href="#despre-proiect">Despre proiect</a>
       <ul>
-        <li><a href="#built-with">Cu ce este construit</a></li>
+        <li><a href="#cu-ce-este-construit">Cu ce este construit</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Introducere</a>
+      <a href="#introducere">Introducere</a>
       <ul>
-        <li><a href="#prerequisites">Cerințe</a></li>
-        <li><a href="#installation">Instalare</a></li>
+        <li><a href="#cerințe">Cerințe</a></li>
+        <li><a href="#instalare">Instalare</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Aplicatia</a></li>
-    <li><a href="#contributing">Contributii</a></li>
-    <li><a href="#conclusions-and-future-work">Concluzii și direcții viitoare</a></li>
+    <li><a href="#aplicatia">Aplicatia</a></li>
+    <li><a href="#contributii">Contributii</a></li>
+    <li><a href="#concluzii-și-direcții-viitoare">Concluzii și direcții viitoare</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
