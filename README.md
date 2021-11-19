@@ -112,7 +112,7 @@ Pentru început am creat un request de GET în care primim un response status 20
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getdress.png?raw=true)
 
-Apoi am creat un request de POST pentru a adăuga un logo. 
+Apoi am creat un request de POST pentru a adăuga un logo de tip JSON care l-am pus in body requestului. 
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/dogLogo.png?raw=true)
 
