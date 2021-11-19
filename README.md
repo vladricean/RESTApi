@@ -89,7 +89,7 @@ Pentru început am creat un răspuns de GET și POST pentru a adăuga un logo. �
 <!-- GETTING STARTED -->
 ## Introducere
 
-Pentru a avea o cpie locală și functională urmați pașii de mai jos.
+Pentru a avea o copie locală și functională urmați pașii de mai jos.
 
 ### Cerințe
 
