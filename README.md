@@ -108,7 +108,7 @@ Se clonează proiectul
 
 Pentru început am creat un request de GET în care primim un response status 200 daca serverul intoarce requestul cu success sau 404 daca nu este gasit.
 
-![alt text](https://github.com/vladricean/RESTApi/images/getdress.png?raw=true)
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getdress.png?raw=true)
 
 <!-- CONTRIBUTING -->
 ## Constributii
