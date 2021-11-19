@@ -106,57 +106,12 @@ Se clonează proiectul
 <!-- USAGE EXAMPLES -->
 ## Aplicația
 
-Here i will post some screenshots to ilustrate how the app works.
+Pentru început am creat un request de GET în care primim un response status 200 daca serverul intoarce requestul cu success sau 404 daca nu este gasit.
 
-1. Login screen
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/screenshot.png?raw=true)
-
-2. Some basic customer choices
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/first.png?raw=true)
-
-3. Choosing equipment based on your personal information (height, foot size, sex)
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/gif.gif?raw=true)
-
-4. Easy registration in 2 steps
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg1.png?raw=true)
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/reg2.png?raw=true)
-
-5. What can the administrator do?
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/adminmain.png?raw=true)
-
-6. Administrator can choose what type of product to add
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/chooseadd.png?raw=true)
-
-7. Example of adding a helmet
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/addhelmet.png?raw=true)
-
-8. Administrator can remove products from the database
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/delete.png?raw=true)
-
-9. The administrator can return products through barcode/QR scanning so that they can be rented again.
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan2.png?raw=true)
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/scan1.png?raw=true)
-
-
-## Diagram
-
-![alt text](https://github.com/RiceanVlad/SkiRental/blob/main/images/diagramaFinala1.png?raw=true)
-
-## Extra Documentation
-
-More documentation [here](https://github.com/RiceanVlad/SkiRental/tree/main/documentation) generated with kdoc from [dokka](https://github.com/Kotlin/dokka)
+![alt text](https://github.com/vladricean/RESTApi/images/getdress.png?raw=true)
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Constributii
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
