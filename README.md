@@ -51,21 +51,19 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Despre proiect</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Construit cu</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Introducere</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Cerințe</a></li>
+        <li><a href="#installation">Instalare</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#diagram">Diagram</a></li>
-    <li><a href="#extra-documentation">Extra Documentation</a></li>
+    <li><a href="#aplicatia">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#conclusions-and-future-work">Conclusions and future work</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -76,42 +74,37 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Despre proiect
 
-I was looking for renting ski equipment mobile apps and couldn't find any so i made my own. The Ski Rental app is about renting ski equipment before you arrive at some ski resort, so they have the equipment up and ready for your arrival.
+Am creat un REST API pentru administrarea unui magazin online de rochii de gală. Dorim să ne folosim de o multitudine de operații CRUD pentru un management complex, dar intuitiv pentru magazinul online.
 
-Here's why:
-* You spend less time waiting at the ski resort reserving ski equipment
-* It's more convenient, just pay online
-* You can choose your favorite equipment
-* It's coronavirus safe, less people wait in lines :smile:
+Pentru început am creat un răspuns de GET și POST pentru a adăuga un logo. În cazul în care se introduce un empty  string pentru logo, atunci se returneaza eroarea 418.
 
-### Built With
+### Construit cu
 
-* [Android Studio](https://developer.android.com/studio)
-* [Glide](https://github.com/bumptech/glide)
-* [Firebase](https://firebase.google.com/)
+* REST API
+* Node.js
+* Express
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Introducere
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Cerințe
 
-* Android studio
-  You can download it here: https://developer.android.com/studio
+* Node instalat
 
-### Installation
+### Instalare
 
-You just Clone the repo
+Se cloneaza proiectul
    ```sh
-   git clone (https://github.com/RiceanVlad/SkiRental.git)
+   git clone (https://github.com/vladricean/RESTApi.git)
    ```
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Aplicația
 
 Here i will post some screenshots to ilustrate how the app works.
 
