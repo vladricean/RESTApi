@@ -90,15 +90,16 @@ Pentru început am creat un răspuns de GET și POST pentru a adăuga un logo. �
 <!-- GETTING STARTED -->
 ## Introducere
 
-To get a local copy up and running follow these simple example steps.
+Pentru a avea o cpie locală și functională urmați pașii de mai jos.
 
 ### Cerințe
 
-* Node instalat
+* Node.js instalat
+Se găsește la linkul următor: https://nodejs.org/en/
 
 ### Instalare
 
-Se cloneaza proiectul
+Se clonează proiectul
    ```sh
    git clone (https://github.com/vladricean/RESTApi.git)
    ```
