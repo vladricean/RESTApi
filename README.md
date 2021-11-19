@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/RiceanVlad/SkiRental">
-    <img src="image.png" alt="Logo" width="80" height="120">
+    <img src="logo.png" alt="Logo" width="80" height="120">
   </a>
 
   <h3 align="center">Ski Rental</h3>
