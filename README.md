@@ -106,11 +106,19 @@ Se clonează proiectul
 <!-- USAGE EXAMPLES -->
 ## Aplicația
 
-Pentru a testa operațiile asupra serverului de REST API, ne vom folosi de POSTMAN.
+**Pentru a testa operațiile asupra serverului de REST API, ne vom folosi de POSTMAN.**
 
-**Pentru început am creat un request de GET în care primim un response status 200 daca serverul intoarce requestul cu success sau 404 daca nu este gasit.**
+Pentru început am creat un request de GET în care primim un response status 200 daca serverul intoarce requestul cu success sau 404 daca nu este gasit.
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getdress.png?raw=true)
+
+Apoi am creat un request de POST pentru a adăuga un logo. 
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/dogLogo.png?raw=true)
+
+În cazul în care se introduce un empty  string pentru logo, atunci se returneaza eroarea 418.
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/postEmpty.png?raw=true)
 
 <!-- CONTRIBUTING -->
 ## Constributii
