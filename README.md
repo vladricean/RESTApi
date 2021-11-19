@@ -25,22 +25,22 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/RiceanVlad/SkiRental">
+  <a href="https://github.com/vladricean/RESTApi">
     <img src="image.png" alt="Logo" width="80" height="120">
   </a>
 
   <h3 align="center">REST API - Node.js</h3>
 
   <p align="center">
-    Rest Api pentru administrarea unui magazin online de rochii de gală.
+    REST API pentru administrarea unui magazin online de rochii de gală.
     <br />
-    <a href="https://github.com/RiceanVlad/SkiRental"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/vladricean/RESTApi"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
-    <a href="https://github.com/RiceanVlad/SkiRental/issues">Report Bug</a>
+    <a href="https://github.com/vladricean/RESTApi/issues">Report Bug</a>
     ·
-    <a href="https://github.com/RiceanVlad/SkiRental/issues">Request Feature</a>
+    <a href="https://github.com/vladricean/RESTApi/issues">Request Feature</a>
   </p>
 </p>
 
