@@ -29,10 +29,10 @@
     <img src="image.png" alt="Logo" width="80" height="120">
   </a>
 
-  <h3 align="center">Ski Rental</h3>
+  <h3 align="center">REST API - Node.js</h3>
 
   <p align="center">
-    Mobile Android app for renting ski equipment.
+    Rest Api pentru administrarea unui magazin online de rochii de gală.
     <br />
     <a href="https://github.com/RiceanVlad/SkiRental"><strong>Explore the docs »</strong></a>
     <br />
