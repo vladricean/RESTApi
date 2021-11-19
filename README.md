@@ -51,21 +51,21 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Despre proiect</a>
+      <a href="#despre-proiect">Despre proiect</a>
       <ul>
-        <li><a href="#built-with">Cu ce este construit</a></li>
+        <li><a href="#cu-ce-este-construit">Cu ce este construit</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Introducere</a>
+      <a href="#introducere">Introducere</a>
       <ul>
-        <li><a href="#prerequisites">Cerințe</a></li>
-        <li><a href="#installation">Instalare</a></li>
+        <li><a href="#cerințe">Cerințe</a></li>
+        <li><a href="#instalare">Instalare</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Aplicatia</a></li>
-    <li><a href="#contributing">Contributii</a></li>
-    <li><a href="#conclusions-and-future-work">Concluzii și direcții viitoare</a></li>
+    <li><a href="#aplicația">Aplicația</a></li>
+    <li><a href="#contribuții">Contribuții</a></li>
+    <li><a href="#concluzii-și-direcții-viitoare">Concluzii și direcții viitoare</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -89,7 +89,7 @@ Pentru început am creat un răspuns de GET și POST pentru a adăuga un logo. �
 <!-- GETTING STARTED -->
 ## Introducere
 
-Pentru a avea o cpie locală și functională urmați pașii de mai jos.
+Pentru a avea o copie locală și functională urmați pașii de mai jos.
 
 ### Cerințe
 
@@ -106,14 +106,24 @@ Se clonează proiectul
 <!-- USAGE EXAMPLES -->
 ## Aplicația
 
+**Pentru a testa operațiile asupra serverului de REST API, ne vom folosi de POSTMAN.**
+
 Pentru început am creat un request de GET în care primim un response status 200 daca serverul intoarce requestul cu success sau 404 daca nu este gasit.
 
-![alt text](https://github.com/vladricean/RESTApi/images/getdress.png?raw=true)
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getdress.png?raw=true)
+
+Apoi am creat un request de POST pentru a adăuga un logo. 
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/dogLogo.png?raw=true)
+
+În cazul în care se introduce un empty  string pentru logo, atunci se returneaza eroarea 418.
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/postEmpty.png?raw=true)
 
 <!-- CONTRIBUTING -->
-## Constributii
+## Constribuții
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Orice fel de contribuții sunt bine primite. Pentru a contribui la proiect faceți fork.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -121,24 +131,24 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Conclusions and future work
+## Concluzii și direcții viitoare
 
-On the future I'm planning to be able to rent equipment based on a specific date.
-
-I'm also thinking into implementing give away gift cards for some customers.
+Pe viitor dorim să implementăm operații complexe.
 
 Possibly implement percentage usage of equipment.
 
 <!-- CONTACT -->
 ## Contact
 
+Ilie Emanuela-Maria - [emanuela.ilie99@e-uvt.ro](emanuela.ilie99@e-uvt.ro)
+
 Ricean Ioan-Vlad - [ioan.ricean95@e-uvt.ro](ioan.ricean95@e-uvt.ro)
 
-Project Link: [https://github.com/RiceanVlad/SkiRental](https://github.com/RiceanVlad/SkiRental)
+Project Link: [https://github.com/vladricean/RESTApi](https://github.com/vladricean/RESTApi)
 
-School subject: Programming for Mobile Devices
+Materia: Tehnologii Web
 
-Date of dispatch: 13.05.2021
+Data lansării: 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
