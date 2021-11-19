@@ -53,7 +53,7 @@
     <li>
       <a href="#about-the-project">Despre proiect</a>
       <ul>
-        <li><a href="#built-with">Construit cu</a></li>
+        <li><a href="#built-with">Cu ce este construit</a></li>
       </ul>
     </li>
     <li>
@@ -80,7 +80,7 @@ Am creat un REST API pentru administrarea unui magazin online de rochii de gală
 
 Pentru început am creat un răspuns de GET și POST pentru a adăuga un logo. În cazul în care se introduce un empty  string pentru logo, atunci se returneaza eroarea 418.
 
-### Construit cu
+### Cu ce este construit
 
 * REST API
 * Node.js
