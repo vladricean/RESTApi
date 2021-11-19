@@ -63,11 +63,10 @@
         <li><a href="#installation">Instalare</a></li>
       </ul>
     </li>
-    <li><a href="#aplicatia">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#conclusions-and-future-work">Conclusions and future work</a></li>
+    <li><a href="#usage">Aplicatia</a></li>
+    <li><a href="#contributing">Contributii</a></li>
+    <li><a href="#conclusions-and-future-work">Concluzii și direcții viitoare</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -187,19 +186,13 @@ School subject: Programming for Mobile Devices
 Date of dispatch: 13.05.2021
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Pinterest](https://ro.pinterest.com/search/pins/?q=ski%20clipart&rs=typed&term_meta[]=ski%7Ctyped&term_meta[]=clipart%7Ctyped)
-* [GitHub Pages](https://pages.github.com)
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/RiceanVlad/SkiRental.svg?style=for-the-badge
-[contributors-url]: https://github.com/RiceanVlad/SkiRental/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/RiceanVlad/SkiRental.svg?style=for-the-badge
-[forks-url]: https://github.com/RiceanVlad/SkiRental/network/members
-[stars-shield]: https://img.shields.io/github/stars/RiceanVlad/SkiRental.svg?style=for-the-badge
-[stars-url]: https://github.com/RiceanVlad/SkiRental/stargazers
-[issues-shield]: https://img.shields.io/github/issues/RiceanVlad/SkiRental.svg?style=for-the-badge
-[issues-url]: https://github.com/RiceanVlad/SkiRental/issues
+[contributors-shield]: https://img.shields.io/github/contributors/vladricean/RESTApi.svg?style=for-the-badge
+[contributors-url]: https://github.com/vladricean/RESTApi/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/vladricean/RESTApi.svg?style=for-the-badge
+[forks-url]: https://github.com/vladricean/RESTApi/network/members
+[stars-shield]: https://img.shields.io/github/stars/vladricean/RESTApi.svg?style=for-the-badge
+[stars-url]: https://github.com/vladricean/RESTApi/stargazers
+[issues-shield]: https://img.shields.io/github/issues/vladricean/RESTApi.svg?style=for-the-badge
+[issues-url]: https://github.com/vladricean/RESTApi/issues
