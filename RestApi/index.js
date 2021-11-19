@@ -4,14 +4,14 @@ const PORT = 8080
 
 app.use(express.json())
 
-app.get('/tshirt', (req, res) => {
+app.get('/dress', (req, res) => {
     res.status(200).send({
-        tshirt: '👕',
+        dress: '👗',
         size: 'large'
     })
 });
 
-app.post('/tshirt/:id', (req, res) => {
+app.post('/dress/:id', (req, res) => {
     const { id } = req.params;
     const { logo } = req.body;
 
@@ -20,7 +20,7 @@ app.post('/tshirt/:id', (req, res) => {
     }
 
     res.send({
-        tshirt: `👕 with your ${logo} and ID of {id}`,
+        dress: `👗 with your ${logo} and ID of ${id}`,
     });
 
 });
