@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = 8080
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json())
 
 app.get('/', (req,res) => {
-    res.send('Hello there!');
+    res.send('Hello there!!!');
 });
 
 app.get('/dress', (req, res) => {
@@ -16,7 +16,7 @@ app.get('/dress', (req, res) => {
 });
 
 app.get('/api/dresses', (req, res) => {
-    res.send([1, 2, 3]);
+    res.send([1, 2, 3, 4]);
 });
 
 app.post('/dress/:id', (req, res) => {
