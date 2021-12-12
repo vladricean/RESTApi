@@ -3,44 +3,17 @@ const Joi = require('joi');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-
-app.use(express.json())
-
-
-
-app.get('/dress', (req, res) => {
-    res.status(200).send({
-        dress: '👗',
-        size: 'large'
-    })
-});
-
-app.post('/dress/:id', (req, res) => {
-    const { id } = req.params;
-    const { logo } = req.body;
-
-    if(!logo) {
-        res.status(418).send({ message: 'We need a logo!' })
-    }
-
-    res.send({
-        dress: `👗 with your ${logo} and ID of ${id}`,
-    });
-
-});
-
-// NEW API
-
-
+app.use(express.json());
 
 const dresses = [
     { id: 1, name: 'dress1', color: "red"},
     { id: 2, name: 'dress2', color: "black"},
     { id: 3, name: 'dress3', color: "white"},
+    { id: 4, name: 'dress4'},
 ];
 
 app.get('/', (req, res) => {
-    res.send('Hello there!!!');
+    res.send('Welcome to our Dress Shop! :)');
 });
 
 app.get('/api/dresses', (req, res) => {
@@ -86,7 +59,7 @@ app.put('/api/dresses/:id', (req, res) => {
 
 app.delete('/api/dresses/:id', (req, res) => {
     const dress = dresses.find(c => c.id === parseInt(req.params.id));
-    if(!dress) return res.status(404).send('The course with the given ID was not found.');
+    if(!dress) return res.status(404).send('The dress with the given ID was not found.');
 
     // delete
     const index = dresses.indexOf(dress);
@@ -94,6 +67,13 @@ app.delete('/api/dresses/:id', (req, res) => {
     
     res.send(dress);
 });
+
+// app.get('/api/dresses', (req, res) => {
+//     res.send(
+//         req.query.id, 
+//         req.query.color
+//     );
+// });
 
 function validateDress(dress){
     const schema = {
