@@ -141,8 +141,6 @@ Orice fel de contribuții sunt bine primite. Pentru a contribui la proiect face�
 
 Pe viitor dorim să implementăm operații complexe.
 
-Possibly implement percentage usage of equipment.
-
 <!-- CONTACT -->
 ## Contact
 
