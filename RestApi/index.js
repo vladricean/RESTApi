@@ -84,6 +84,19 @@ app.put('/api/dresses/:id', (req, res) => {
 
     // updatez obiectul
     dress.name = req.body.name;
+
+    // trimit inapoi ce am modificat (in cazul in care e interesat utilizatorul)
+    res.send(dress);
+});
+
+app.delete('/api/dresses/:id', (req, res) => {
+    const dress = dresses.find(c => c.id === parseInt(req.params.id));
+    if(!dress) res.status(404).send('The course with the given ID was not found.');
+
+    // delete
+    const index = dresses.indexOf(dress);
+    dresses.splice(index, 1);
+    
     res.send(dress);
 });
 
