@@ -35,8 +35,8 @@ app.post('/dress/:id', (req, res) => {
 
 const dresses = [
     { id: 1, name: 'dress1', color: "red"},
-    { id: 2, name: 'dress2'},
-    { id: 3, name: 'dress3'},
+    { id: 2, name: 'dress2', color: "black"},
+    { id: 3, name: 'dress3', color: "white"},
 ];
 
 app.get('/', (req, res) => {
@@ -78,6 +78,7 @@ app.put('/api/dresses/:id', (req, res) => {
         
     // updatez obiectul
     dress.name = req.body.name;
+    dress.color = req.body.color;
 
     // trimit inapoi ce am modificat (in cazul in care e interesat utilizatorul)
     res.send(dress);
