@@ -4,11 +4,19 @@ const PORT = 8080
 
 app.use(express.json())
 
+app.get('/', (req,res) => {
+    res.send('Hello there!');
+});
+
 app.get('/dress', (req, res) => {
     res.status(200).send({
         dress: '👗',
         size: 'large'
     })
+});
+
+app.get('/api/dresses', (req, res) => {
+    res.send([1, 2, 3]);
 });
 
 app.post('/dress/:id', (req, res) => {
