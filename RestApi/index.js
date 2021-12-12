@@ -34,12 +34,12 @@ app.post('/dress/:id', (req, res) => {
 
 
 const dresses = [
-    { id: 1, name: 'dress1'},
+    { id: 1, name: 'dress1', color: "red"},
     { id: 2, name: 'dress2'},
     { id: 3, name: 'dress3'},
 ];
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
     res.send('Hello there!!!');
 });
 
@@ -60,7 +60,8 @@ app.post('/api/dresses', (req, res) => {
 
     const dress = {
         id: dresses.length + 1,
-        name: req.body.name
+        name: req.body.name,
+        color: req.body.color
     };
     dresses.push(dress);
     res.send(dress);
@@ -95,7 +96,8 @@ app.delete('/api/dresses/:id', (req, res) => {
 
 function validateDress(dress){
     const schema = {
-        name: Joi.string().min(3).required()
+        name: Joi.string().min(3).required(),
+        color: Joi.string().min(3).required()
     };
     return Joi.validate(dress, schema);
 }
