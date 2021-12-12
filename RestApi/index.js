@@ -49,17 +49,14 @@ app.get('/api/dresses', (req, res) => {
 
 app.get('/api/dresses/:id', (req, res) => {
     const dress = dresses.find(c => c.id === parseInt(req.params.id));
-    if(!dress) res.status(404).send('The course with the given ID was not found.');
+    if(!dress) return res.status(404).send('The course with the given ID was not found.');
     res.send(dress);
 });
 
 app.post('/api/dresses', (req, res) => {
     const { error } = validateDress(req.body);
 
-    if(error){
-        res.status(400).send(error.details[0].message)
-        return;
-    }
+    if(error) return res.status(400).send(error.details[0].message)
 
     const dress = {
         id: dresses.length + 1,
@@ -72,16 +69,12 @@ app.post('/api/dresses', (req, res) => {
 app.put('/api/dresses/:id', (req, res) => {
     // verific ca exista
     const dress = dresses.find(c => c.id === parseInt(req.params.id));
-    if(!dress) res.status(404).send('The course with the given ID was not found.');
+    if(!dress) return res.status(404).send('The course with the given ID was not found.');
     
     // verific ca requestul e valid
     const { error } = validateDress(req.body);
-
-    if(error){
-        res.status(400).send(error.details[0].message)
-        return;
-    }
-
+    if(error) return res.status(400).send(error.details[0].message)
+        
     // updatez obiectul
     dress.name = req.body.name;
 
@@ -91,7 +84,7 @@ app.put('/api/dresses/:id', (req, res) => {
 
 app.delete('/api/dresses/:id', (req, res) => {
     const dress = dresses.find(c => c.id === parseInt(req.params.id));
-    if(!dress) res.status(404).send('The course with the given ID was not found.');
+    if(!dress) return res.status(404).send('The course with the given ID was not found.');
 
     // delete
     const index = dresses.indexOf(dress);
