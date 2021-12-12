@@ -54,14 +54,10 @@ app.get('/api/dresses/:id', (req, res) => {
 });
 
 app.post('/api/dresses', (req, res) => {
-    const schema = {
-        name: Joi.string().min(3).required()
-    };
+    const { error } = validateDress(req.body);
 
-    const result = Joi.validate(req.body, schema);
-
-    if(result.error){
-        res.status(400).send(result.error.details[0].message)
+    if(error){
+        res.status(400).send(error.details[0].message)
         return;
     }
 
@@ -72,6 +68,31 @@ app.post('/api/dresses', (req, res) => {
     dresses.push(dress);
     res.send(dress);
 });
+
+app.put('/api/dresses/:id', (req, res) => {
+    // verific ca exista
+    const dress = dresses.find(c => c.id === parseInt(req.params.id));
+    if(!dress) res.status(404).send('The course with the given ID was not found.');
+    
+    // verific ca requestul e valid
+    const { error } = validateDress(req.body);
+
+    if(error){
+        res.status(400).send(error.details[0].message)
+        return;
+    }
+
+    // updatez obiectul
+    dress.name = req.body.name;
+    res.send(dress);
+});
+
+function validateDress(dress){
+    const schema = {
+        name: Joi.string().min(3).required()
+    };
+    return Joi.validate(dress, schema);
+}
 
 app.listen(
     PORT,
