@@ -1,4 +1,6 @@
 const express = require('express');
+const Joi = require('joi');
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -29,6 +31,8 @@ app.post('/dress/:id', (req, res) => {
 
 // NEW API
 
+
+
 const dresses = [
     { id: 1, name: 'dress1'},
     { id: 2, name: 'dress2'},
@@ -50,6 +54,17 @@ app.get('/api/dresses/:id', (req, res) => {
 });
 
 app.post('/api/dresses', (req, res) => {
+    const schema = {
+        name: Joi.string().min(3).required()
+    };
+
+    const result = Joi.validate(req.body, schema);
+
+    if(result.error){
+        res.status(400).send(result.error.details[0].message)
+        return;
+    }
+
     const dress = {
         id: dresses.length + 1,
         name: req.body.name
