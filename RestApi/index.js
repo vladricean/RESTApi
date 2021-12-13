@@ -25,7 +25,7 @@ app.get('/api/dresses', (req, res) => {
 
 app.get('/api/dresses/:id', (req, res) => {
     const dress = dresses.find(c => c.id === req.params.id);
-    if(!dress) return res.status(404).send('The course with the given ID was not found.');
+    if(!dress) return res.status(404).send('The dress with the given ID was not found.');
     res.send(dress);
 });
 
