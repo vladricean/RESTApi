@@ -11,17 +11,8 @@ const {
     v4: uuidv4,
   } = require('uuid');
 
-const dresses = [
-    { id: uuidv4(), name: 'dress1', color: "red"},
-    { id: uuidv4(), name: 'dress2', color: "black"},
-    { id: uuidv4(), name: 'dress3', color: "white"},
-];
-
-const users = [
-    
-];
-
 // ************************ USERS ****************************** //
+const users = [];
 
 app.get('/api/users', (req, res) => {
     res.json(users)
@@ -33,13 +24,35 @@ app.post('/api/users', async (req, res) => {
         const hashedPassword = await bcrypt.hash(req.body.password, salt)
         const user = { name: req.body.name, password: hashedPassword }
         users.push(user)
-        res.status(201).send()
+        res.status(201).send("User created successfully!")
+    } catch {
+        res.status(500).send("Could not create a new user.")
+    }
+})
+
+app.post('/api/users/login', async (req, res) => {
+    const user = users.find(user => user.name === req.body.name)
+    if (user == null) {
+        return res.status(400).send('Cannot find user.')
+    }
+    try {
+      if(await bcrypt.compare(req.body.password, user.password)) {
+            res.send('Successfully logged in.')
+      } else {
+            res.send('Not Allowed.')
+      }
     } catch {
         res.status(500).send()
     }
-  })
+})
 
 // *********************** DRESSES ***************************** //
+const dresses = [
+    { id: uuidv4(), name: 'dress1', color: "red"},
+    { id: uuidv4(), name: 'dress2', color: "black"},
+    { id: uuidv4(), name: 'dress3', color: "white"},
+];
+
 
 app.get('/', (req, res) => {
     res.send('Welcome to our Dress Shop! :)');
@@ -73,19 +86,19 @@ app.post('/api/dresses', (req, res) => {
 });
 
 app.put('/api/dresses/:id', (req, res) => {
-    // verific ca exista
+    // check user exists
     const dress = dresses.find(c => c.id === req.params.id);
     if(!dress) return res.status(404).send('The dress with the given ID was not found.');
     
-    // verific ca requestul e valid
+    // check if request is valid
     const { error } = validateDress(req.body);
     if(error) return res.status(400).send(error.details[0].message)
         
-    // updatez obiectul
+    // update object
     dress.name = req.body.name;
     dress.color = req.body.color;
 
-    // trimit inapoi ce am modificat (in cazul in care e interesat utilizatorul)
+    // send something back (in case user is interested)
     res.send(dress);
 });
 
