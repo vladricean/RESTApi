@@ -1,15 +1,19 @@
 const express = require('express');
 const Joi = require('joi');
+const { 
+    v1: uuidv1,
+    v4: uuidv4,
+  } = require('uuid');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
 const dresses = [
-    { id: 1, name: 'dress1', color: "red"},
-    { id: 2, name: 'dress2', color: "black"},
-    { id: 3, name: 'dress3', color: "white"},
-    { id: 4, name: 'dress4'},
+    { id: uuidv4(), name: 'dress1', color: "red"},
+    { id: uuidv4(), name: 'dress2', color: "black"},
+    { id: uuidv4(), name: 'dress3', color: "white"},
+    { id: uuidv4(), name: 'dress4', color: "green"},
 ];
 
 app.get('/', (req, res) => {
@@ -31,8 +35,10 @@ app.post('/api/dresses', (req, res) => {
 
     if(error) return res.status(400).send(error.details[0].message)
 
+    const userId = uuidv4();
+
     const dress = {
-        id: dresses.length + 1,
+        id: userId,
         name: req.body.name,
         color: req.body.color
     };
@@ -68,12 +74,11 @@ app.delete('/api/dresses/:id', (req, res) => {
     res.send(dress);
 });
 
-// app.get('/api/dresses', (req, res) => {
-//     res.send(
-//         req.query.id, 
-//         req.query.color
-//     );
-// });
+app.get('/api/dresses/:color', (req, res) => {
+    const dress = dresses.find(c => c.color === parseInt(req.params.color));
+    if(!dress) return res.status(404).send('The course with the given  was not found.');
+    res.send(dress);
+});
 
 function validateDress(dress){
     const schema = {
