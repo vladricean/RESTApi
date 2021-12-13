@@ -1,19 +1,45 @@
 const express = require('express');
 const Joi = require('joi');
+const app = express();
+const PORT = process.env.PORT || 8080;
+app.use(express.json());
+
+const bcrypt = require('bcrypt')
+
 const { 
     v1: uuidv1,
     v4: uuidv4,
   } = require('uuid');
-
-const app = express();
-const PORT = process.env.PORT || 8080;
-app.use(express.json());
 
 const dresses = [
     { id: uuidv4(), name: 'dress1', color: "red"},
     { id: uuidv4(), name: 'dress2', color: "black"},
     { id: uuidv4(), name: 'dress3', color: "white"},
 ];
+
+const users = [
+    
+];
+
+// ************************ USERS ****************************** //
+
+app.get('/api/users', (req, res) => {
+    res.json(users)
+})
+
+app.post('/api/users', async (req, res) => {
+    try {
+        const salt = await bcrypt.genSalt()
+        const hashedPassword = await bcrypt.hash(req.body.password, salt)
+        const user = { name: req.body.name, password: hashedPassword }
+        users.push(user)
+        res.status(201).send()
+    } catch {
+        res.status(500).send()
+    }
+  })
+
+// *********************** DRESSES ***************************** //
 
 app.get('/', (req, res) => {
     res.send('Welcome to our Dress Shop! :)');
