@@ -13,7 +13,6 @@ const dresses = [
     { id: uuidv4(), name: 'dress1', color: "red"},
     { id: uuidv4(), name: 'dress2', color: "black"},
     { id: uuidv4(), name: 'dress3', color: "white"},
-    { id: uuidv4(), name: 'dress4', color: "green"},
 ];
 
 app.get('/', (req, res) => {
@@ -25,7 +24,7 @@ app.get('/api/dresses', (req, res) => {
 });
 
 app.get('/api/dresses/:id', (req, res) => {
-    const dress = dresses.find(c => c.id === parseInt(req.params.id));
+    const dress = dresses.find(c => c.id === req.params.id);
     if(!dress) return res.status(404).send('The course with the given ID was not found.');
     res.send(dress);
 });
@@ -49,8 +48,8 @@ app.post('/api/dresses', (req, res) => {
 
 app.put('/api/dresses/:id', (req, res) => {
     // verific ca exista
-    const dress = dresses.find(c => c.id === parseInt(req.params.id));
-    if(!dress) return res.status(404).send('The course with the given ID was not found.');
+    const dress = dresses.find(c => c.id === req.params.id);
+    if(!dress) return res.status(404).send('The dress with the given ID was not found.');
     
     // verific ca requestul e valid
     const { error } = validateDress(req.body);
@@ -65,7 +64,7 @@ app.put('/api/dresses/:id', (req, res) => {
 });
 
 app.delete('/api/dresses/:id', (req, res) => {
-    const dress = dresses.find(c => c.id === parseInt(req.params.id));
+    const dress = dresses.find(c => c.id === req.params.id);
     if(!dress) return res.status(404).send('The dress with the given ID was not found.');
 
     // delete
