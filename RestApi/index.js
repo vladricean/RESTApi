@@ -30,6 +30,7 @@ app.get('/api/dresses/:id', (req, res) => {
     res.send(dress);
 });
 
+// add new dress
 app.post('/api/dresses', (req, res) => {
     const { error } = validateDress(req.body);
 
@@ -71,12 +72,6 @@ app.delete('/api/dresses/:id', (req, res) => {
     const index = dresses.indexOf(dress);
     dresses.splice(index, 1);
     
-    res.send(dress);
-});
-
-app.get('/api/dresses/:color', (req, res) => {
-    const dress = dresses.find(c => c.color === parseInt(req.params.color));
-    if(!dress) return res.status(404).send('The course with the given  was not found.');
     res.send(dress);
 });
 
