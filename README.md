@@ -109,12 +109,14 @@ Se clonează proiectul
 **Pentru a testa operațiile asupra serverului de REST API, ne vom folosi de POSTMAN.**
 
 Pana acum avem functionalitatea de creare/ logare a unui utilizator normal.
-Utilizatorul se va putea loga doar daca introduce parola corecta, altfel va fi respins de server.
-In plus, la crearea contului parola se encrypteaza.
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/login1.png?raw=true)
 
+Utilizatorul se va putea loga doar daca introduce parola corecta, altfel va fi respins de server.
+
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/login2.png?raw=true)
+
+Avem request de GET all users. In plus, la crearea contului parola se encrypteaza.
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/login3.png?raw=true)
 
