@@ -122,14 +122,24 @@ Avem request de GET all users. In plus, la crearea contului parola se encrypteaz
 
 Avem un request de GET care ne returneaza o lista in format JSON cu toate rochiile si atributele acestora.
 
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getalldresses.png?raw=true)
+
 Un alt request dupa care putem cauta o rochie dupa ID.
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getbyid.png?raw=true)
 
 Un request de POST pentru a adauga o noua rochie.
 Atributele sunt verificate de catre server, iar rochia se adauga doar in cazul in care sunt validate.
 
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/addnewdress.png?raw=true)
+
 Se pot updata atributele unei rochii.
 
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/updatedress.png?raw=true)
+
 Se poate sterge o rochie dupa ID.
+
+![alt text](https://github.com/vladricean/RESTApi/blob/main/images/delete.png?raw=true)
 
 <!-- CONTRIBUTING -->
 ## Constribuții
