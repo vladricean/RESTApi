@@ -48,9 +48,9 @@ app.post('/api/users/login', async (req, res) => {
 
 // *********************** DRESSES ***************************** //
 const dresses = [
-    { id: uuidv4(), name: 'dress1', color: "red"},
-    { id: uuidv4(), name: 'dress2', color: "black"},
-    { id: uuidv4(), name: 'dress3', color: "white"},
+    { id: uuidv4(), name: 'Roll neck dress in sand', brand: "CRYSTAL", color: "white", size:"S", length:"short", price: "450", instock: "true"},
+    { id: uuidv4(), name: 'Beatrice bardot drape wrap', brand: "VESPER", color: "red", size:"M", length:"medium", price: "650", instock: "true"},
+    { id: uuidv4(), name: 'Tall square neck', brand: "ASOS DESIGN", color: "dark green", size:"L", length:"long", price: "350", instock: "false"},
 ];
 
 
@@ -79,7 +79,12 @@ app.post('/api/dresses', (req, res) => {
     const dress = {
         id: userId,
         name: req.body.name,
-        color: req.body.color
+        brand: req.body.brand,
+        color: req.body.color,
+        size: req.body.size,
+        length: req.body.length,
+        price: req.body.price,
+        instock: req.body.instock
     };
     dresses.push(dress);
     res.send(dress);
@@ -96,7 +101,12 @@ app.put('/api/dresses/:id', (req, res) => {
         
     // update object
     dress.name = req.body.name;
+    dress.brand = req.body.brand;
     dress.color = req.body.color;
+    dress.size = req.body.size;
+    dress.length = req.body.length;
+    dress.price = req.body.price;
+    dress.instock = req.body.instock;
 
     // send something back (in case user is interested)
     res.send(dress);
@@ -116,7 +126,12 @@ app.delete('/api/dresses/:id', (req, res) => {
 function validateDress(dress){
     const schema = {
         name: Joi.string().min(3).required(),
-        color: Joi.string().min(3).required()
+        brand: Joi.string().min(2).required(),
+        color: Joi.string().min(3).required(),
+        size: Joi.string().min(1).required(),
+        length: Joi.string().min(3).required(),
+        price: Joi.string().min(2).required(),
+        instock: Joi.string().min(3).required()
     };
     return Joi.validate(dress, schema);
 }
