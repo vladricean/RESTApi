@@ -77,7 +77,7 @@
 
 Am creat un REST API pentru administrarea unui magazin online de rochii de gală. Dorim să ne folosim de o multitudine de operații CRUD pentru un management complex, dar intuitiv pentru magazinul online.
 
-Pentru început am creat un request de GET și POST pentru a adăuga un logo. În cazul în care se introduce un empty  string pentru logo, atunci se returneaza eroarea 418.
+Pana acum am adaugat functionalitatea de login a unui utilizator normal si cateva requesturi de GET, POST, UPDATE si DELETE asupra unei liste de rochii de gală.
 
 ### Cu ce este construit
 
@@ -108,23 +108,22 @@ Se clonează proiectul
 
 **Pentru a testa operațiile asupra serverului de REST API, ne vom folosi de POSTMAN.**
 
-Pentru început am creat un request de GET în care primim un response status 200 daca serverul intoarce requestul cu success sau 404 daca nu este gasit.
+Pana acum avem functionalitatea de creare/ logare a unui utilizator normal.
+Utilizatorul se va putea loga doar daca introduce parola corecta, altfel va fi respins de server.
+In plus, la crearea contului parola se encrypteaza.
 
 ![alt text](https://github.com/vladricean/RESTApi/blob/main/images/getdress.png?raw=true)
 
-Apoi am creat un request de POST pentru a adăuga un logo de tip JSON care l-am pus in bodyul requestului. 
+Avem un request de GET care ne returneaza o lista in format JSON cu toate rochiile si atributele acestora.
 
-![alt text](https://github.com/vladricean/RESTApi/blob/main/images/dogLogo.png?raw=true)
+Un alt request dupa care putem cauta o rochie dupa ID.
 
-În cazul în care se introduce un empty  string pentru logo, atunci se returneaza eroarea 418.
+Un request de POST pentru a adauga o noua rochie.
+Atributele sunt verificate de catre server, iar rochia se adauga doar in cazul in care sunt validate.
 
-![alt text](https://github.com/vladricean/RESTApi/blob/main/images/postEmpty.png?raw=true)
+Se pot updata atributele unei rochii.
 
-Pe viitor desigur că dorim să implementăm operații complexe, cât și un administrator care are access la anumite comenzi.
-Vom ilustra mai jos câteva exemple:
-
-![alt text](https://github.com/vladricean/RESTApi/blob/main/images/futureRequests.png?raw=true)
-
+Se poate sterge o rochie dupa ID.
 
 <!-- CONTRIBUTING -->
 ## Constribuții
@@ -139,7 +138,8 @@ Orice fel de contribuții sunt bine primite. Pentru a contribui la proiect face�
 
 ## Concluzii și direcții viitoare
 
-Pe viitor dorim să implementăm operații complexe.
+Pentru etapa finala o sa integram o baza de date in proiect.
+Si o sa cream 2 tipuri de utilizatori(viewer, admin), in care fiecare are acces la anumite comenzi.
 
 <!-- CONTACT -->
 ## Contact
