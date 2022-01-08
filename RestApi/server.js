@@ -1,8 +1,30 @@
+// RUN SERVER: nodemon server.js
+
 const express = require('express');
 const Joi = require('joi');
 const app = express();
 const PORT = process.env.PORT || 8080;
 app.use(express.json());
+
+const DATABASE_URL = 'mongodb://localhost/users'
+const mongoose = require('mongoose')
+mongoose.connect(DATABASE_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+const db = mongoose.connection
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('Connected to Database'))
+
+const usersSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
+})
+
+const User = mongoose.model('User', usersSchema)
 
 const bcrypt = require('bcrypt')
 
@@ -14,22 +36,38 @@ const {
 // ************************ USERS ****************************** //
 const users = [];
 
-app.get('/api/users', (req, res) => {
-    res.json(users)
+// get all users
+app.get('/api/users', async (req, res) => {
+    try {
+        const users = await User.find()
+        res.json(users)
+    } catch(err) {
+        res.status(500).json({messsage: err.message})
+    }
 })
 
+// create new user
 app.post('/api/users', async (req, res) => {
     try {
         const salt = await bcrypt.genSalt()
         const hashedPassword = await bcrypt.hash(req.body.password, salt)
-        const user = { name: req.body.name, password: hashedPassword }
-        users.push(user)
-        res.status(201).send("User created successfully!")
+        const user = new User({ 
+            name: req.body.name, 
+            password: hashedPassword 
+        })
+        // users.push(user)
+        try {
+            const newUser = await user.save()
+            res.status(201).send("User created successfully!")
+        } catch(err) {
+            res.status(500).send("Something unexpected occured..")
+        }
     } catch {
         res.status(500).send("Could not create a new user.")
     }
 })
 
+// login
 app.post('/api/users/login', async (req, res) => {
     const user = users.find(user => user.name === req.body.name)
     if (user == null) {
