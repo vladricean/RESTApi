@@ -196,6 +196,22 @@ app.put('/api/dresses/:id', (req, res) => {
     res.send(dress);
 });
 
+app.patch('/api/dresses/:id', getDress, async (req, res) => {
+    res.dress.name = req.body.name;
+    res.dress.brand = req.body.brand;
+    res.dress.color = req.body.color;
+    res.dress.size = req.body.size;
+    res.dress.length = req.body.length;
+    res.dress.price = req.body.price;
+    res.dress.instock = req.body.instock;
+    try{
+        const updatedDress = await res.dress.save()
+        res.json(updatedDress)
+    } catch(err) {
+        res.status(400).json({message: err.message })
+    }
+});
+
 app.delete('/api/dresses/:id', getDress, async (req, res) => {
     try {
         await res.dress.remove()
