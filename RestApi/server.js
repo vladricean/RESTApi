@@ -142,10 +142,8 @@ app.get('/api/dresses', async (req, res) => {
     }
 });
 
-app.get('/api/dresses/:id', (req, res) => {
-    const dress = dresses.find(c => c.id === req.params.id);
-    if(!dress) return res.status(404).send('The dress with the given ID was not found.');
-    res.send(dress);
+app.get('/api/dresses/:id', getDress, (req, res) => {
+    res.send(res.dress)
 });
 
 // add new dress
@@ -198,15 +196,18 @@ app.put('/api/dresses/:id', (req, res) => {
     res.send(dress);
 });
 
-app.delete('/api/dresses/:id', (req, res) => {
-    const dress = dresses.find(c => c.id === req.params.id);
-    if(!dress) return res.status(404).send('The dress with the given ID was not found.');
+app.delete('/api/dresses/:id', async (req, res) => {
+    try {
+        const dress = await Dress.findById(req.params.id);
+        if(!dress) return res.status(404).send('The dress with the given ID was not found.');
 
-    // delete
-    const index = dresses.indexOf(dress);
-    dresses.splice(index, 1);
-    
-    res.send(dress);
+         // delete
+        await res.dress.remove()
+        
+        res.send(dress);
+    } catch(err) {
+        res.status(500).send("Dress could not be deleted..")
+    }
 });
 
 function validateDress(dress){
@@ -220,6 +221,21 @@ function validateDress(dress){
         instock: Joi.string().min(3).required()
     };
     return Joi.validate(dress, schema);
+}
+
+async function getDress(req, res, next) {
+    let dress
+    try {
+      dress = await Dress.findById(req.params.id)
+      if (dress == null) {
+        return res.status(404).json({ message: 'Cannot find dress' })
+      }
+    } catch (err) {
+      return res.status(500).json({ message: err.message })
+    }
+  
+    res.dress = dress
+    next()
 }
 
 app.listen(
